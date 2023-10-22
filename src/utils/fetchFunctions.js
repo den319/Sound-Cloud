@@ -19,6 +19,8 @@ export async function handleFavourites(album, favourites, setFavourites, token, 
     const {songId}= album;
     isPresentInFavourites(setFavourites, album, favourites, setIsLiked);
 
+    // {console.log("song id: ", songId)}
+
     try {
         var myHeaders = new Headers();
         myHeaders.append("Authorization", `Bearer ${token}`);

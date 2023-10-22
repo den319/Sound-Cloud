@@ -40,10 +40,11 @@ function NavbarForMobile() {
     }, [favourites, activeSong])
 
     useEffect(() => {
-        audioPlayer.current.currentTime = seekTime;
+        if(seekTime) {
+            audioPlayer.current.currentTime = seekTime;
+        }
       }, [seekTime]);
-
-  
+      
     
     useEffect(() => {
         if (audioPlayer.current) {
@@ -77,6 +78,8 @@ function NavbarForMobile() {
                     <div className="flex items-center p-[7px]">
                         <div className="p-[8px]" onClick={() => 
                                 handleFavourites(activeSong, favourites, setFavourites, token, projectId, setIsLiked)}>
+                                {/* {console.log("song id: ", activeSong)} */}
+
                             {
                                 isLiked ? <Filled_heart width={"20px"} height={"20px"} color={"#ffffff"} />
                                 :

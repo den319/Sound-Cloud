@@ -7,7 +7,7 @@ function UserProvider({children}) {
 
     const [showLogInForm, setStateOfLoginForm]= useState(false);
     const [showSignUpForm, setStateOfSignUpForm]= useState(false);
-    const [isAuthenticated, setAuthenticated]= useState(false); // isSigned --> authenticated
+    const [isAuthenticated, setAuthenticated]= useState(false);
 
     const [user, set_user]= useState(null);
     const [token, set_token]= useState(null);

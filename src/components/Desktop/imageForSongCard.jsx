@@ -24,7 +24,7 @@ export default function ImageForSongCard({album}) {
     const {projectId, favourites, setFavourites, favArtists, setFavArtists}= useContext(MusicContext);
 
     const { playPause, nextSong, currentSongs, setCurrentSongs, handleActiveSong, isPlaying}= useContext(AudioContext);
-    const {token}= useContext(UserContext);
+    const {token, isAuthenticated}= useContext(UserContext);
     
     const [showModal, setShowModal]= useState(false);
     const [isHovered, setIsHovered]= useState(false);
@@ -101,21 +101,23 @@ export default function ImageForSongCard({album}) {
                         <div className='mr-[12px] cursor-pointer' onClick={(e) => {e.preventDefault(); e.stopPropagation();
                                 handleFavourites(album, favourites, setFavourites, token, projectId, setIsLiked)}}>
                             {
-                                isLiked ? <Filled_heart color={"#f50"} />
+                                isLiked ? <Filled_heart color={"#f50"} width={"15px"} height={"16px"} />
                                 :
                                 <Empty_heart color= {"white"} width={"14px"} height={"16px"} />
                             }
                         </div>
                         
-                        <div className='mr-[10px] cursor-pointer' 
-                            onClick={(e) => {e.preventDefault(); e.stopPropagation(); add_RemoveFromFavourites(artist?.[0]?.singerId, setIsFollowed, setFavArtists, favArtists, "favArtists")}}>
-                            {
-                                isFollowed ? <UserChecked color={"#f50"} width={"14px"} height={"16px"} />
-                                :
-                                <Filled_follow color= {"white"} width={"14px"} height={"16px"}/>
-                            }
-                        
-                        </div>
+                        {   isAuthenticated && 
+                            <div className='mr-[10px] cursor-pointer' 
+                                onClick={(e) => {e.preventDefault(); e.stopPropagation(); add_RemoveFromFavourites(artist?.[0]?.singerId, setIsFollowed, setFavArtists, favArtists, "favArtists")}}>
+                                { 
+                                    isFollowed ? <UserChecked color={"#f50"} width={"14px"} height={"16px"} />
+                                    :
+                                    <Filled_follow color= {"white"} width={"14px"} height={"16px"}/>
+                                }
+                            
+                            </div>
+                        }
 
                         <div className='relative cursor-pointer' 
                             onClick={(e) => {e.preventDefault(); e.stopPropagation(); openTheModal(e, setShowModal)}}>
