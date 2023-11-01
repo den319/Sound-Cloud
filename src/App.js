@@ -4,7 +4,7 @@ import { Outlet, Route, Routes, useNavigate } from 'react-router-dom';
 import Signin_form from './Pages/Authentication/singin_form';
 import SignUp_form from './Pages/Authentication/signup_form';
 import SongPageForDesktop from './components/Desktop/songPageForDesktop';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { useEffect } from 'react';
 import AudioPlayerForDektop from './components/Desktop/Music player/audioPlayerForDektop';
 import { UserContext } from './Contexts/authenticationContext';
@@ -35,7 +35,9 @@ import { AudioContext } from './Contexts/audioContext';
 
 function App() {
   
-  const isMobile= window.innerWidth < 1024;
+  // const isMobile= window.innerWidth < 1024;
+
+  const [isMobile, setIsMobile]= useState(false);
 
   const {setFavourites, setFavArtists, projectId}= useContext(MusicContext);
   const {isActive}= useContext(AudioContext);
@@ -76,6 +78,27 @@ function App() {
       
     }
   }, [authToken])
+
+  useEffect(() => {
+    // document.addEventListener("resize", () => {
+    //     if(window.innerWidth < 1024) {
+    //       setIsMobile(true);
+    //     }
+    // })
+
+    const handleResize = () => {
+      if (window.innerWidth < "1024px") {
+        setIsMobile(true);
+      }
+    };
+  
+    window.addEventListener("resize", handleResize);
+  
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   
   return (

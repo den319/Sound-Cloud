@@ -115,7 +115,7 @@ function Signin_form() {
                             text-[45px] pb-[1rem]`}>Sing In</p>
 
                         <button className="w-full bg-[#3578e5] flex flex-row justify-center items-center py-[8px] rounded-[3px]
-                            my-[0.5rem]">
+                            my-[0.5rem] cursor-not-allowed">
                             <img className="w-[16px] mr-[8px]"
                                 src="https://secure.sndcdn.com/assets/facebook-8d9809.png" alt="facebook" />
                             <div className="text-white">
@@ -124,7 +124,7 @@ function Signin_form() {
                         </button>
                     
                         <button className="w-full flex flex-row justify-center items-center py-[8px] rounded-[3px]
-                            my-[0.5rem]" id={isMobile ? 'google-tab-for-mobile' : 'google-tab-for-desktop'}>
+                            my-[0.5rem] cursor-not-allowed" id={isMobile ? 'google-tab-for-mobile' : 'google-tab-for-desktop'}>
                             <img className="w-[15px] mr-[8px] mt-[0.5px]"
                                  src="https://secure.sndcdn.com/assets/google-a6c367.svg" alt="google" />
                             <div>
@@ -133,7 +133,7 @@ function Signin_form() {
                         </button>
                     
                         <button className="w-full flex flex-row justify-center items-center py-[8px] rounded-[3px]
-                            my-[0.5rem]" id={isMobile ? 'apple-tab-for-mobile' : 'apple-tab-for-desktop'}>
+                            my-[0.5rem] cursor-not-allowed" id={isMobile ? 'apple-tab-for-mobile' : 'apple-tab-for-desktop'}>
                             <img className="w-[25px] mr-[4px] mt-[1px]"
                                  src="https://secure.sndcdn.com/assets/apple-0a88d2.svg" alt="facebook" />
                             <div className="text-white">
@@ -175,7 +175,7 @@ function Signin_form() {
                         }
 
                         <input type="submit" 
-                            className="w-full my-[0.5rem] rounded-[3px] py-[7px]"
+                            className="w-full my-[0.5rem] rounded-[3px] py-[7px] cursor-pointer"
                             id={isMobile ? 'submit-button-for-mobile' : 'submit-button-for-desktop'}/>
                     </form>
 
