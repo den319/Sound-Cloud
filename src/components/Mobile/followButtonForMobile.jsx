@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import Filled_followers from "../logos_and_icons/filledFollowers";
+import Filled_followers from "../Logos_and_icons/filledFollowers";
 import { MusicContext } from "../../Contexts/musicContext";
 import { useState } from "react";
 import { useEffect } from "react";
-import { add_RemoveFromFavourites } from "../../utils/utilites";
-import UserChecked from "../logos_and_icons/userChecked";
+import { add_RemoveFromFavourites } from "../../Utils/localStorageFunctions";
+import UserChecked from "../Logos_and_icons/userChecked";
 
 
 

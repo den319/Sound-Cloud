@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import FooterForMobile from "../Home page/footerForMobile";
+import FooterForMobile from "../Home_page/footerForMobile";
 
 
 

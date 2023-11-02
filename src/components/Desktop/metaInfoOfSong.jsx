@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { MusicContext } from "../../Contexts/musicContext";
-import Play_button_small from "../logos_and_icons/playButton_small";
-import Filled_heart from "../logos_and_icons/filledHeart";
-import Repost from "../logos_and_icons/repost";
-import Comment from "../logos_and_icons/comment";
+import Play_button_small from "../Logos_and_icons/playButton_small";
+import Filled_heart from "../Logos_and_icons/filledHeart";
+import Repost from "../Logos_and_icons/repost";
+import Comment from "../Logos_and_icons/comment";
 
 
 

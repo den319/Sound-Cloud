@@ -1,5 +1,5 @@
 
-import ImageForSongCard from "./imageForSongCard";
+import ImageForSongCard from "./Discover_page_components/imageForSongCard";
 
 
 

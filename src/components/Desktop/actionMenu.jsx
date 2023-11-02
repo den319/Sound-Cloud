@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import Copy_link from "../logos_and_icons/copyLink";
-import Filled_heart from "../logos_and_icons/filledHeart";
-import MoreButtonLogo from "../logos_and_icons/moreBottonLogo";
-import Repost from "../logos_and_icons/repost";
-import Share from "../logos_and_icons/share";
+import Copy_link from "../Logos_and_icons/copyLink";
+import Filled_heart from "../Logos_and_icons/filledHeart";
+import MoreButtonLogo from "../Logos_and_icons/moreBottonLogo";
+import Repost from "../Logos_and_icons/repost";
+import Share from "../Logos_and_icons/share";
 import { MusicContext } from "../../Contexts/musicContext";
 import { useState } from "react";
 import { useEffect } from "react";

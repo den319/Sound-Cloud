@@ -1,36 +1,36 @@
 import './App.css';
-import MobileComponent from './Pages/Mobile/Home page/mobileComponent';
+import MobileComponent from './Pages/Mobile/Home_page/mobileComponent';
 import { Outlet, Route, Routes, useNavigate } from 'react-router-dom';
 import Signin_form from './Pages/Authentication/singin_form';
 import SignUp_form from './Pages/Authentication/signup_form';
 import SongPageForDesktop from './components/Desktop/songPageForDesktop';
 import { useContext, useState } from 'react';
 import { useEffect } from 'react';
-import AudioPlayerForDektop from './components/Desktop/Music player/audioPlayerForDektop';
+import AudioPlayerForDektop from './components/Desktop/Music_player/audioPlayerForDektop';
 import { UserContext } from './Contexts/authenticationContext';
-import HomePageBeforeLogin from './Pages/Desktop/Home page before login/homePageBeforeLogin';
-import ProfilePageForDesktop from './Pages/Desktop/profile page/profilePageForDesktop';
+import HomePageBeforeLogin from './Pages/Desktop/Home_page_before_login/homePageBeforeLogin';
+import ProfilePageForDesktop from './Pages/Desktop/Profile_page/profilePageForDesktop';
 import DiscoverPageForDesktop from './Pages/Desktop/discoverPageForDesktop';
 import FeedPageForDesktop from './Pages/Desktop/feedPageForDesktop';
 import LoginPage from './Pages/Authentication/loginPage';
-import PopularTracksSection from './Pages/Desktop/profile page/popularTracksSection';
-import TracksSection from './Pages/Desktop/profile page/tracksSection';
-import AlbumsSection from './Pages/Desktop/profile page/albumsSection';
-import PlaylistSection from './Pages/Desktop/profile page/playlistSection';
-import RepostSection from './Pages/Desktop/profile page/repostSection';
+import PopularTracksSection from './Pages/Desktop/Profile_page/popularTracksSection';
+import TracksSection from './Pages/Desktop/Profile_page/tracksSection';
+import AlbumsSection from './Pages/Desktop/Profile_page/albumsSection';
+import PlaylistSection from './Pages/Desktop/Profile_page/playlistSection';
+import RepostSection from './Pages/Desktop/Profile_page/repostSection';
 import { MusicContext } from './Contexts/musicContext';
-import { getListFromLocal } from './utils/utilites';
-import AllSection from './Pages/Desktop/profile page/allSection';
-import LibraryPageForDesktop from './Pages/Desktop/library page/libraryPageForDesktop';
-import OverviewForLibraryPage from './Pages/Desktop/library page/overviewForLibraryPage';
-import LikesForLibraryPage from './Pages/Desktop/library page/likesForLibraryPage';
-import PlaylistsForLibraryPage from './Pages/Desktop/library page/playlistsForLibraryPage';
-import AlbumsForLibraryPage from './Pages/Desktop/library page/albumsForLibraryPage';
-import StationsForLibraryPage from './Pages/Desktop/library page/stationsForLibraryPage';
-import FollowingForLibraryPage from './Pages/Desktop/library page/followingForLibraryPage';
-import HistoryForLibraryPage from './Pages/Desktop/library page/historyForLibraryPage';
+import { getListFromLocal } from './Utils/localStorageFunctions';
+import AllSection from './Pages/Desktop/Profile_page/allSection';
+import LibraryPageForDesktop from './Pages/Desktop/Library_page/libraryPageForDesktop';
+import OverviewForLibraryPage from './Pages/Desktop/Library_page/overviewForLibraryPage';
+import LikesForLibraryPage from './Pages/Desktop/Library_page/likesForLibraryPage';
+import PlaylistsForLibraryPage from './Pages/Desktop/Library_page/playlistsForLibraryPage';
+import AlbumsForLibraryPage from './Pages/Desktop/Library_page/albumsForLibraryPage';
+import StationsForLibraryPage from './Pages/Desktop/Library_page/stationsForLibraryPage';
+import FollowingForLibraryPage from './Pages/Desktop/Library_page/followingForLibraryPage';
+import HistoryForLibraryPage from './Pages/Desktop/Library_page/historyForLibraryPage';
 import AlbumPageForDesktop from './components/Desktop/albumPageForDesktop';
-import { getFavouritesList } from './utils/fetchFunctions';
+import { getFavouritesList } from './Utils/fetchFunctions';
 import { AudioContext } from './Contexts/audioContext';
 
 function App() {
@@ -38,6 +38,8 @@ function App() {
   // const isMobile= window.innerWidth < 1024;
 
   const [isMobile, setIsMobile]= useState(false);
+
+  // const [screenWidth, setScreenWidth]= useState(window.innerWidth);
 
   const {setFavourites, setFavArtists, projectId}= useContext(MusicContext);
   const {isActive}= useContext(AudioContext);
@@ -86,25 +88,27 @@ function App() {
     //     }
     // })
 
-    const handleResize = () => {
-      if (window.innerWidth < "1024px") {
-        setIsMobile(true);
-      }
-    };
+    // const handleResize = () => {
+    //   if (window.innerWidth < "1024px") {
+    //     setIsMobile(true);
+    //   }
+    // };
   
-    window.addEventListener("resize", handleResize);
+    // window.addEventListener("resize", handleResize);
   
-    // Cleanup the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+    // // Cleanup the event listener when the component unmounts
+    // return () => {
+    //   window.removeEventListener("resize", handleResize);
+    // };
+    // setScreenWidth(window.innerWidth);
+  }, [window.innerWidth]);
 
   
   return (
     <div className='relative'>
     {
-      isMobile ? 
+      // screenWidth < "1024px" ? 
+      isMobile ?
       (
         <MobileComponent />
       ) 

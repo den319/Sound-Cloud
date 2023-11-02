@@ -1,24 +1,24 @@
 import { useContext, useRef } from "react";
 import { MusicContext } from "../../Contexts/musicContext";
-import Empty_heart from "../logos_and_icons/emptyHeart";
-import Comment from "../logos_and_icons/comment";
-import Repost from "../logos_and_icons/repost";
-import Play_button_small from "../logos_and_icons/playButton_small";
+import Empty_heart from "../Logos_and_icons/emptyHeart";
+import Comment from "../Logos_and_icons/comment";
+import Repost from "../Logos_and_icons/repost";
+import Play_button_small from "../Logos_and_icons/playButton_small";
 import FollowButtonForMobile from "./followButtonForMobile";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import useFetchSingleSong from "../../custom hooks/useFetchSingleSong";
+import useFetchSingleSong from "../../Custom_hooks/useFetchSingleSong";
 import { useEffect } from "react";
-import Filled_heart from "../logos_and_icons/filledHeart";
-import { fetch_data, handleFavourites } from "../../utils/fetchFunctions";
+import Filled_heart from "../Logos_and_icons/filledHeart";
+import { fetch_data, handleFavourites } from "../../Utils/fetchFunctions";
 import { UserContext } from "../../Contexts/authenticationContext";
-import FooterForMobile from "../../Pages/Mobile/Home page/footerForMobile";
-import { mapSingleSongData } from "../../utils/mapFunctions";
+import FooterForMobile from "../../Pages/Mobile/Home_page/footerForMobile";
+import { mapSingleSongData } from "../../Utils/mapFunctions";
 import SongTabForMobile from "./songTabForMobile";
 import { AudioContext } from "../../Contexts/audioContext";
-import PlayButton_Big from "../logos_and_icons/playButton_big";
-import PauseButton from "../logos_and_icons/pauseButton";
-import MoreButtonLogo from "../logos_and_icons/moreBottonLogo";
+import PlayButton_Big from "../Logos_and_icons/playButton_big";
+import PauseButton from "../Logos_and_icons/pauseButton";
+import MoreButtonLogo from "../Logos_and_icons/moreBottonLogo";
 
 
 

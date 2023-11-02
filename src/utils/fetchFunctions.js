@@ -1,6 +1,6 @@
 import axios from "axios";
 import { extractDataFromSongList } from "./mapFunctions";
-import { isPresentInFavourites } from "./utilites";
+import { isPresentInFavourites } from "./localStorageFunctions";
 
 
 export async function fetch_data(url, projectId) {
@@ -18,8 +18,6 @@ export async function fetch_data(url, projectId) {
 export async function handleFavourites(album, favourites, setFavourites, token, projectId, setIsLiked) {
     const {songId}= album;
     isPresentInFavourites(setFavourites, album, favourites, setIsLiked);
-
-    // {console.log("song id: ", songId)}
 
     try {
         var myHeaders = new Headers();
@@ -43,11 +41,6 @@ export async function handleFavourites(album, favourites, setFavourites, token, 
         if (response.ok) {
             const data = await response.json();
             
-            // console.log("good response: ", data.data.songs);
-            // console.log("favourite list: ", favourites);
-            // console.log("song id: ", songId);
-            // const { token, data: loginData } = data;
-
             return data.data.songs;
 
         } else {

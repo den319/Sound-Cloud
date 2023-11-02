@@ -1,13 +1,13 @@
 import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
-import NotificationLogo from "../../components/logos_and_icons/notificationLogo";
-import MessageLogo from "../../components/logos_and_icons/messageLogo";
+import NotificationLogo from "../../components/Logos_and_icons/notificationLogo";
+import MessageLogo from "../../components/Logos_and_icons/messageLogo";
 import { UserContext } from "../../Contexts/authenticationContext";
-import MoreButtonLogo from "../../components/logos_and_icons/moreBottonLogo";
-import AboutUsModal from "../../Portal/Destop/aboutUs Portal/aboutUsModal";
-import ChevronDownLogo from "../../components/logos_and_icons/chevronDownLogo";
-import ProfileModal from "../../Portal/Destop/Profile Portal/profileModal";
-import { closeTheModal, openTheModal } from "../../utils/utilites";
+import MoreButtonLogo from "../../components/Logos_and_icons/moreBottonLogo";
+import AboutUsModal from "../../Portal/Destop/AboutUs_portal/aboutUsModal";
+import ChevronDownLogo from "../../components/Logos_and_icons/chevronDownLogo";
+import ProfileModal from "../../Portal/Destop/Profile_portal/profileModal";
+import { closeTheModal, openTheModal } from "../../Utils/localStorageFunctions";
 
 
 

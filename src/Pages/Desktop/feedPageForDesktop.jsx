@@ -1,9 +1,9 @@
 import { useContext} from "react";
-import AsideSectionForDiscoverPage from "../../components/Desktop/asideSectionForDiscoverPage";
+import AsideSectionForDiscoverPage from "../../components/Desktop/Discover_page_components/asideSectionForDiscoverPage";
 import { MusicContext } from "../../Contexts/musicContext";
 import NavbarForDesktop from "./navbarForDesktop";
-import { useFetchSongs } from "../../custom hooks/useFetchSongs";
-import RenderSongInFeedPage from "../../components/Desktop/feed page components/renderSongInFeedPage";
+import { useFetchSongs } from "../../Custom_hooks/useFetchSongs";
+import RenderSongInFeedPage from "../../components/Desktop/Feed_page_components/renderSongInFeedPage";
 
 
 

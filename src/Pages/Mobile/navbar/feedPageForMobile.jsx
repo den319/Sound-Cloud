@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import FollowButtonForMobile from "../../../components/Mobile/followButtonForMobile";
 import { MusicContext } from "../../../Contexts/musicContext";
-import { useFetchSongs } from "../../../custom hooks/useFetchSongs";
+import { useFetchSongs } from "../../../Custom_hooks/useFetchSongs";
 import { useEffect } from "react";
 
 

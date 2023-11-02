@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { MusicContext } from "../../Contexts/musicContext";
-import Filled_eye from "../../components/logos_and_icons/filledEye";
-import Filled_slashed_eye from "../../components/logos_and_icons/filledSlashedEye";
+import Filled_eye from "../../components/Logos_and_icons/filledEye";
+import Filled_slashed_eye from "../../components/Logos_and_icons/filledSlashedEye";
 import { useNavigate, useLocation } from "react-router";
 import { UserContext } from "../../Contexts/authenticationContext";
 

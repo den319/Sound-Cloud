@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import Filled_follow from "../logos_and_icons/filledFollow";
-import UserChecked from "../logos_and_icons/userChecked";
+import Filled_follow from "../Logos_and_icons/filledFollow";
+import UserChecked from "../Logos_and_icons/userChecked";
 import { MusicContext } from "../../Contexts/musicContext";
-import { add_RemoveFromFavourites } from "../../utils/utilites";
+import { add_RemoveFromFavourites } from "../../Utils/localStorageFunctions";
 
 
 

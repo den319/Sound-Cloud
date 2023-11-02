@@ -107,8 +107,6 @@ export function extractDataFromSongList(data) {
 
 
 export function mapArtistData(data) {
-    // console.log("data: ", data);
-
     return {
         
         singerImage: data?.image,

@@ -3,12 +3,12 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AudioContext } from "../../../Contexts/audioContext";
 import { MusicContext } from "../../../Contexts/musicContext";
-import Filled_heart from "../../../components/logos_and_icons/filledHeart";
-import Empty_heart from "../../../components/logos_and_icons/emptyHeart";
-import PlayButton_Big from "../../../components/logos_and_icons/playButton_big";
-import PauseButton from "../../../components/logos_and_icons/pauseButton";
+import Filled_heart from "../../../components/Logos_and_icons/filledHeart";
+import Empty_heart from "../../../components/Logos_and_icons/emptyHeart";
+import PlayButton_Big from "../../../components/Logos_and_icons/playButton_big";
+import PauseButton from "../../../components/Logos_and_icons/pauseButton";
 import { UserContext } from "../../../Contexts/authenticationContext";
-import { handleFavourites } from "../../../utils/fetchFunctions";
+import { handleFavourites } from "../../../Utils/fetchFunctions";
 
 function NavbarForMobile() {
 

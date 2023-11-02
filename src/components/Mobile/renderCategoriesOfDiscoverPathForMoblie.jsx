@@ -3,9 +3,9 @@ import { MusicContext } from "../../Contexts/musicContext";
 import SongCardForMobile from "./songCardForMobile";
 import { useState } from "react";
 import { useEffect } from "react";
-import { fetch_data } from "../../utils/fetchFunctions";
-import { extractDataFromSongList } from "../../utils/mapFunctions";
-import FooterForMobile from "../../Pages/Mobile/Home page/footerForMobile";
+import { fetch_data } from "../../Utils/fetchFunctions";
+import { extractDataFromSongList } from "../../Utils/mapFunctions";
+import FooterForMobile from "../../Pages/Mobile/Home_page/footerForMobile";
 
 
 

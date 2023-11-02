@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { MusicContext } from "../../Contexts/musicContext";
-import Play_button_small from "../logos_and_icons/playButton_small";
-import Filled_heart from "../logos_and_icons/filledHeart";
-import Repost from "../logos_and_icons/repost";
-import Playlist from "../logos_and_icons/playlist";
+import Play_button_small from "../Logos_and_icons/playButton_small";
+import Filled_heart from "../Logos_and_icons/filledHeart";
+import Repost from "../Logos_and_icons/repost";
+import Playlist from "../Logos_and_icons/playlist";
 import { useParams } from "react-router";
 import Signin_form from "../../Pages/Authentication/singin_form";
 import SignUp_form from "../../Pages/Authentication/signup_form";
@@ -11,17 +11,13 @@ import FooterForDesktop from "../../Pages/Desktop/FooterForDesktop";
 import NavbarForDesktop from "../../Pages/Desktop/navbarForDesktop";
 import { UserContext } from "../../Contexts/authenticationContext";
 import ActionMenu from "./actionMenu";
-import { useFetchAlbums } from "../../custom hooks/useFetchAlbums";
-import ArtistSection from "./Song page components/artistSection";
-import LikeSection from "./Song page components/likeSection";
-import PlaylistSection from "./Song page components/playlistSection";
-import useFetchSingleAlbum from "../../custom hooks/useFetchSingleAlbum";
-import HeaderForAlbumPage from "./album page components/headerForAlbumPageForDesktop";
-import RenderSongPageForAlbum from "./album page components/renderSongListForAlbum";
-import { AudioContext } from "../../Contexts/audioContext";
-
-
-
+import { useFetchAlbums } from "../../Custom_hooks/useFetchAlbums";
+import ArtistSection from "./Song_page_components/artistSection";
+import LikeSection from "./Song_page_components/likeSection";
+import PlaylistSection from "./Song_page_components/playlistSection";
+import useFetchSingleAlbum from "../../Custom_hooks/useFetchSingleAlbum";
+import HeaderForAlbumPage from "./Album_page_components/headerForAlbumPageForDesktop";
+import RenderSongPageForAlbum from "./Album_page_components/renderSongListForAlbum";
 
 
 

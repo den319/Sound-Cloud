@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
-import AsideSectionForDiscoverPage from "../../components/Desktop/asideSectionForDiscoverPage";
-import RenderCategoriesInDiscoverPageForDesktop from "../../components/Desktop/renderCategoriesOfDiscoverPageForDesktop";
+import AsideSectionForDiscoverPage from "../../components/Desktop/Discover_page_components/asideSectionForDiscoverPage";
+import RenderCategoriesInDiscoverPageForDesktop from "../../components/Desktop/Discover_page_components/renderCategoriesOfDiscoverPageForDesktop";
 import NavbarForDesktop from "./navbarForDesktop";
 import { UserContext } from "../../Contexts/authenticationContext";
 import { MusicContext } from "../../Contexts/musicContext";
-import ImageForAlbumCard from "../../components/Desktop/imageForAlbumCard";
-import { useFetchAlbums } from "../../custom hooks/useFetchAlbums";
+import ImageForAlbumCard from "../../components/Desktop/Discover_page_components/imageForAlbumCard";
+import { useFetchAlbums } from "../../Custom_hooks/useFetchAlbums";
 
 
 
