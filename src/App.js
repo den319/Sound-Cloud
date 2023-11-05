@@ -35,11 +35,8 @@ import { AudioContext } from './Contexts/audioContext';
 
 function App() {
   
-  // const isMobile= window.innerWidth < 1024;
-
   const [isMobile, setIsMobile]= useState(false);
 
-  // const [screenWidth, setScreenWidth]= useState(window.innerWidth);
 
   const {setFavourites, setFavArtists, projectId}= useContext(MusicContext);
   const {isActive}= useContext(AudioContext);
@@ -82,26 +79,22 @@ function App() {
   }, [authToken])
 
   useEffect(() => {
-    // document.addEventListener("resize", () => {
-    //     if(window.innerWidth < 1024) {
-    //       setIsMobile(true);
-    //     }
-    // })
 
-    // const handleResize = () => {
-    //   if (window.innerWidth < "1024px") {
-    //     setIsMobile(true);
-    //   }
-    // };
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
   
-    // window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize);
   
-    // // Cleanup the event listener when the component unmounts
-    // return () => {
-    //   window.removeEventListener("resize", handleResize);
-    // };
-    // setScreenWidth(window.innerWidth);
-  }, [window.innerWidth]);
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   
   return (
